@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {  Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Components/Navbar";
+import Footer from "@/components/Components/Footer";
 
 
 
@@ -26,11 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} ${poppins.className} antialiased`}
+      <body className={`${poppins.variable} ${poppins.className} antialiased`}
       >
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
