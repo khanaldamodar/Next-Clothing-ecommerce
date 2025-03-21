@@ -3,6 +3,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, ShoppingBag, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { signIn,} from "next-auth/react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -38,7 +39,10 @@ export default function Navbar() {
 
         {/* Desktop Auth Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="outline" size="sm">
+          <Button variant="outline" size="sm"
+             onClick={() => signIn("google")}
+                   
+          >
             Log in
           </Button>
           <Button size="sm">Sign up</Button>
