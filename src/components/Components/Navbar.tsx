@@ -32,6 +32,9 @@ export default function Navbar() {
           <Link href="/blog" className="text-sm font-medium transition-colors hover:text-primary">
             Blog
           </Link>
+          <Link href="/FAQs" className="text-sm font-medium transition-colors hover:text-primary">
+            FAQs
+          </Link>
           <Link href="/contact" className="text-sm font-medium transition-colors hover:text-primary">
             Contact
           </Link>
@@ -40,10 +43,9 @@ export default function Navbar() {
         {/* Desktop Auth Buttons */}
         <div className="hidden md:flex items-center gap-4">
           <Button variant="outline" size="sm"
-             onClick={() => signIn("google")}
                    
           >
-            Log in
+            <Link href={"/login"}>Log in</Link>
           </Button>
           <Button size="sm">Sign up</Button>
         </div>
