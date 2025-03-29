@@ -1,0 +1,17 @@
+import mongoose, {Schema, Model, Document} from "mongoose";
+interface categoryType extends  Document{
+    name: string,
+    createdAt: Date,
+}
+const categorySchema =  new Schema<categoryType>({
+    name: {
+        type: String, require: true, unique: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
+
+})
+const Category:Model<categoryType> = mongoose.model.Category || mongoose.model<categoryType>("Category", categorySchema);
+export default Category;
