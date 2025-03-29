@@ -1,11 +1,11 @@
 import mongoose, {Schema, Model, Document} from "mongoose";
 interface categoryType extends  Document{
-    name: string,
-    createdAt: Date,
+    name: string;
+    createdAt: Date;
 }
 const categorySchema =  new Schema<categoryType>({
     name: {
-        type: String, require: true, unique: true
+        type: String, required: true, unique: true
     },
     createdAt: {
         type: Date,
@@ -13,5 +13,5 @@ const categorySchema =  new Schema<categoryType>({
     }
 
 })
-const Category:Model<categoryType> = mongoose.model.Category || mongoose.model<categoryType>("Category", categorySchema);
+const Category:Model<categoryType> = mongoose.models.Category || mongoose.model<categoryType>("Category", categorySchema);
 export default Category;
