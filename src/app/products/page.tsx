@@ -1,4 +1,5 @@
 import ClothingFilter from '@/components/Components/ProductFilter';
+import BeautyShopPage from '@/components/Components/Products-page';
 import { Metadata } from 'next';
 import React from 'react'
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 const Products = () => {
   return (
     <>
-    <ClothingFilter/>
+    <BeautyShopPage/>
     </>
   )
 }
