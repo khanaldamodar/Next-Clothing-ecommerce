@@ -1,3 +1,4 @@
+import ClothingFilter from '@/components/Components/ProductFilter';
 import { Metadata } from 'next';
 import React from 'react'
 
@@ -9,7 +10,9 @@ export const metadata: Metadata = {
 
 const Products = () => {
   return (
-    <div>Products</div>
+    <>
+    <ClothingFilter/>
+    </>
   )
 }
 
